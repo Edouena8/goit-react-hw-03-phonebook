@@ -96,7 +96,6 @@ class App extends Component {
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        // justifyContent: 'center',
         alignItems: 'flex-start',
         gap: '40px',
         fontSize: 40,
