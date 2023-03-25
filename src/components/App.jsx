@@ -32,11 +32,6 @@ class App extends Component {
     if(prevContacts !== nextContacts) {
       localStorage.setItem('contacts', JSON.stringify(nextContacts));
     }
-
-    if(nextContacts.length > prevContacts.length 
-      && prevContacts.length !== 0) {
-      this.toggleModal();
-    }
   }
 
   formSubmitHandler = data => {
@@ -53,6 +48,8 @@ class App extends Component {
         this.setState(prevState => ({
           contacts: [contact, ...prevState.contacts],
         }));
+
+        this.toggleModal();
   };
 
   duplicateContact = ({name}) => {
